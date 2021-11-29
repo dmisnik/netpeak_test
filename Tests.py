@@ -1,0 +1,20 @@
+from Pages import Pages
+
+def test_netpeak(browser):
+    chrome = Pages(browser)
+    chrome.go_to_site()
+    chrome.click_about_us_button()
+    chrome.click_team_button()
+    chrome.click_join_team_button()
+    chrome.switch_tab(1)
+    chrome.check_title("Работа в Netpeak")
+    chrome.click_want_to_work_netpeak_button()
+    chrome.switch_tab(0)
+    chrome.click_user_cabinet_button()
+    chrome.switch_tab(2)
+    chrome.enter_random_creds_login_pass()
+    chrome.check_button_disabled()
+    chrome.click_rules_checkbox()
+    chrome.click_enter_cabinet_button()
+    chrome.check_alert_message()
+    chrome.check_red_login_pass_color()
